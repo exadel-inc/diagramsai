@@ -1,0 +1,4 @@
+- CloudFront(e_alias, e_label, e_techn): Defines an AWS CloudFront entity with alias, label, and technology.
+- CloudFront(e_alias, e_label, e_techn, e_descr): Defines an AWS CloudFront entity with alias, label, technology, and description.
+- CloudFrontParticipant(p_alias, p_label, p_techn): Defines a participant in AWS CloudFront with alias, label, and technology.
+- CloudFrontParticipant(p_alias, p_label, p_techn, p_descr): Defines a participant in AWS CloudFront with alias, label, technology, and description.

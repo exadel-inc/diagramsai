@@ -1,0 +1,2 @@
+- AzureAppService(e_alias, e_label, e_techn): This method is used to create an Azure App Service entity with the specified alias, label, and technology.
+- AzureAppService(e_alias, e_label, e_techn, e_descr): This method is used to create an Azure App Service entity with the specified alias, label, technology, and description.

@@ -1,0 +1,2 @@
+- AzureVirtualNetwork(e_alias, e_label, e_techn): Defines an Azure Virtual Network entity with alias, label, and technology.
+- AzureVirtualNetwork(e_alias, e_label, e_techn, e_descr): Defines an Azure Virtual Network entity with alias, label, technology, and description.

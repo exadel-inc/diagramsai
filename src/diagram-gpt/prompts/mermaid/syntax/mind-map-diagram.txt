@@ -1,0 +1,21 @@
+Mindmap Diagram Syntax:
+
+- Diagram declaration: `mindmap`
+- Node hierarchy: Defined by indentation
+- Node identifiers: Single-word identifiers or surrounded by `[]` for multiple words 
+- Different shapes: `id[Square]`, `id(ROunded Square)`, `id((Circle))`, `id))Bang((, `id)Cloud(`, `id{{Hexagon}}`
+- Default Shape: Node with no delimiters
+- Icons: `::icon(iconClass)`
+- Adding classes: `:::class1 class2`
+- Markdown Strings: `"**Bold Text**, *Italic Text*"`
+- Auto-wrapping: Automatically wraps longer text, newline character starts a new line in the label
+
+Example:
+
+mindmap
+    Root
+        A
+            ::icon(fa fa-book)
+            B[B]
+            :::urgent large
+        C

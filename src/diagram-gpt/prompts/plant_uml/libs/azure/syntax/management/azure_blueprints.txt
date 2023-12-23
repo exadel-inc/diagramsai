@@ -1,0 +1,2 @@
+- AzureBlueprints(e_alias, e_label, e_techn): Creates an Azure Blueprints entity with given alias, label, and technology.
+- AzureBlueprints(e_alias, e_label, e_techn, e_descr): Creates an Azure Blueprints entity with given alias, label, technology, and description.

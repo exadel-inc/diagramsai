@@ -1,0 +1,29 @@
+Class Diagram Syntax:
+
+- Class Definition: `class ClassName` or `class ClassName { attributes and methods }`
+- Class Attributes/Variables: `+PublicVariableName` for public, `-PrivateVariableName` for private, `#ProtectedVariableName` for protected
+- Class Methods: `+PublicMethodName()` for public, `-PrivateMethodName()` for private, `#ProtectedMethodName()` for protected
+- Method Return Type: `+MethodName() Type`
+- Generic Types in Class Members: `ClassMemberName~Type~`
+- Relationships: `ClassA ArrowType ClassB`
+- Annotations: `<<Annotation>> ClassName`
+- Notes: `note "NoteContent"` or `note for ClassName "NoteContent"`
+- Comments: `%% Comment`
+- Namespace: `namespace NamespaceName { classes }`
+- Cardinality: `ClassA "cardinality1" -- "cardinality2" ClassB`
+- Interactive Actions: `action ClassName "reference" "tooltip"` or `click ClassName actionType "reference" "tooltip"`
+
+For example:
+
+classDiagram
+    class Employee {
+        +String name
+        +String id
+        +work()
+    }
+    class Manager{
+        +int numberOfSubordinates
+        +delegateTask()
+    }
+    Employee <|-- Manager
+    note "Manager is a type of Employee"

@@ -1,0 +1,2 @@
+- AzureNSG(e_alias, e_label, e_techn): Creates an Azure Network Security Group entity with given alias, label, and technology.
+- AzureNSG(e_alias, e_label, e_techn, e_descr): Creates an Azure Network Security Group entity with given alias, label, technology, and description.

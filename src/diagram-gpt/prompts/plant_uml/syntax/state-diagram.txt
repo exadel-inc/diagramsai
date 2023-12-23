@@ -1,0 +1,23 @@
+State Diagram Syntax:
+
+- Use `[*]` for the starting and ending point of the state diagram.
+- Use `-->` for arrows.
+- Use `hide empty description` to render state as a simple box.
+- Define composite states using `state` keyword and brackets.
+- Use `state` keyword to use long descriptions for states.
+- Use `[H]` for history and `[H*]` for deep history of a substate.
+- Use `<<fork>>` and `<<join>>` stereotypes for forking and joining.
+- Define concurrent state into a composite state using `--` or `||` symbol as separator.
+- Use `<<choice>>` stereotype for conditional state.
+- Add points with `<<entryPoint>>` and `<<exitPoint>>` stereotypes.
+- Add pins with `<<inputPin>>` and `<<outputPin>>` stereotypes.
+- Add expansion with `<<expansionInput>>` and `<<expansionOutput>>` stereotypes.
+- Force arrow's direction using `-down->`, `-right->`, `-left->`, `-up->`.
+- Change line color and style with `#[color];line.[bold|dashed|dotted]`.
+- Add notes using `note left of`, `note right of`, `note top of`, `note bottom of` keywords.
+- Put notes on state-transition or link with `note on link` keyword.
+- Change state color and style with `#[color|back:color];line:color;line.[bold|dashed|dotted];text:color`.
+- Change colors and fonts with `skinparam`.
+- Change style with `<style>`.
+- Use alias for states with `as`.
+- Display JSON data on the diagram with `json` keyword.

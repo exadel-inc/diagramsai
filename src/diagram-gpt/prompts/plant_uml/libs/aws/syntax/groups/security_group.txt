@@ -1,0 +1,1 @@
+- SecurityGroupGroup(g_alias, g_label): Defines a security group in AWS with alias and label.

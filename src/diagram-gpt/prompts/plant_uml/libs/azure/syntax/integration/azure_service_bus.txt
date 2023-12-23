@@ -1,0 +1,2 @@
+- AzureServiceBus(e_alias, e_label, e_techn): Creates an Azure Service Bus entity with given alias, label, and technology.
+- AzureServiceBus(e_alias, e_label, e_techn, e_descr): Creates an Azure Service Bus entity with given alias, label, technology, and description.

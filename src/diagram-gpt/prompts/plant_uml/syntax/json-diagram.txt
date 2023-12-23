@@ -1,0 +1,15 @@
+JSON Diagram Syntax:
+
+- JSON data is displayed in PlantUML with `@startjson` and `@endjson` keywords.
+- Use `#highlight` to highlight parts of the JSON data. Different styles for highlights can be defined with `<style>`.
+- JSON basic elements can be displayed including null, true, false, numbers, strings, objects, and arrays.
+- JSON arrays or tables can be displayed with array type or minimal array.
+- JSON numbers can be displayed with decimal numbers, digits, and exponent parts.
+- Unicode can be used directly or in escaped form like `\uXXXX` in JSON.
+- Two-character escape sequences can be displayed in JSON.
+- Minimal JSON examples can be displayed with single values.
+- Empty tables or lists can be displayed in JSON.
+- Global styles can be applied to JSON data with `<style>` and `jsonDiagram`.
+- JSON data can be displayed on class or object diagrams with `json` keyword.
+- JSON data can be displayed on deployment diagrams with `json` keyword and `allowmixing`.
+- JSON data can be displayed on state diagrams with `json` keyword.

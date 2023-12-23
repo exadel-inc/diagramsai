@@ -1,0 +1,20 @@
+Timeline Diagram Syntax:
+
+- Diagram Initiation: `timeline`
+- Title: `title yourTitle`
+- Time Period and Event: `{timePeriod} : {event}`
+- Add Multiple Events: `{timePeriod} : {event1} : {event2}` or in new lines `{timePeriod} : {event1}\n : {event2}`
+- Group Time Periods: `section sectionName\n timePeriod1 : event1\n timePeriod2 : event2`
+- Force Line Break: Use `<br>` in a long time period or event
+
+Example Diagram:
+
+timeline
+    title Example Timeline
+    section 2000-2001
+        2000 : Event1
+        2001 : Event2 : Event3
+    section 2002-2005
+        2002 : Event4
+        2003 : Event5
+        2004 : Event6 : Event7

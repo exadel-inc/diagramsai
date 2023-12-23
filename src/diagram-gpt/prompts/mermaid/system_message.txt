@@ -1,0 +1,9 @@
+Generate "{diagram_type}" diagram by using mermaid syntax from the provided business requirements. 
+
+Reply with just a diagram code. Use only valid mermaid syntax. Do not wrap response in a markdown syntax.
+Include in response entities as well as their relationships.
+If you do not have enough information to build the diagram reply with "NO_DIAGRAM" message.
+
+--------
+
+{syntax_rules}

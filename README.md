@@ -1,26 +1,44 @@
-# SOLUTION NAME
-![GitHub contributors](https://img.shields.io/github/contributors/exadel-inc/repository-template)
-![GitHub Repo stars](https://img.shields.io/github/stars/exadel-inc/repository-template?style=plastic)
-![GitHub Repo forks](https://img.shields.io/github/forks/exadel-inc/repository-template?style=plastic)
-![GitHub issues](https://img.shields.io/github/issues/exadel-inc/repository-template)
-[![License](https://img.shields.io/badge/License-Apache%202.0-green.svg)](https://opensource.org/licenses/Apache-2.0)
+# Exadel Diagrams GPT
 
-![](logo.png)
+![GitHub contributors](https://img.shields.io/github/contributors/exadel-inc/diagrams-gpt)
+![GitHub Repo stars](https://img.shields.io/github/stars/exadel-inc/diagrams-gpt?style=plastic)
+![GitHub Repo forks](https://img.shields.io/github/forks/exadel-inc/diagrams-gpt?style=plastic)
+![GitHub issues](https://img.shields.io/github/issues/exadel-inc/diagrams-gpt)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
-**SOLUTION NAME** is a tool or something else. Need to write few words about solution and short description of targets which solution solve.
+**Diagrams GPT** is an application that enables users to create various forms of diagrams such as flowcharts, organizational charts, and network diagrams by inputting simple, natural language instructions. This allows users to visualize data simply and efficiently, saving time and effort compared to traditional manual methods.
 
 ## Description
 
-A full description of the solution, features, benefits, basic functionality, goals with screenshots of the results, screenshots of the product user interface should be located here.
+**Diagrams GPT** is an innovative application that streamlines the process of creating sophisticated diagrams by interpreting natural language inputs. The application leverages the power of the latest GPT-4 AI technology to build [Mermaid](https://github.com/mermaid-js/mermaid) and [PlantUML](https://github.com/plantuml/plantuml) diagrams, allowing users to create a wide range of diagrams including, but not limited to, flowcharts, sequence diagrams, class diagrams, and more. By just describing the desired diagram in simple language, the application translates your instructions into perfect visual representations, thereby enhancing data understanding and communication while minimizing manual work.
 
 [![Solution Screen Shot][product-screenshot]](https://example.com)
 
-Additional necessary information about the solution
-
 ## System Requirements
 
-This is an example of how to list things you need to use the software and how to install them.
- - npm ```npm install npm@latest -g```
+Application consists of two parts: Frontend and Backend.
+
+In order to run frontend app execute the following set of commands:
+
+```sh
+- npm install
+- npm start
+```
+
+For the backend app:
+
+```sh
+pip install -r requirements.txt
+python main.py
+```
+
+There is an option run app through docker by executing the following command:
+
+```sh
+docker-compose up
+```
+
+Open the app in the browser by navigating to `https://127.0.0.1:3000/`.
 
 ## Installation
 
@@ -45,7 +63,7 @@ To get a local copy up and running follow these simple example steps.
 
 ## Documentation
 
-You can find the documentation [in the project's Wiki](#).  
+You can find the documentation [in the project's Wiki](#).
 
 ## Contributing
 
@@ -62,10 +80,12 @@ After creating your first contributing PR you will be requested to sign our Cont
 
 ## License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+Distributed under the MIT License. See [`LICENSE`](./License/MIT) for more information.
 
 ## Contact
 
 Messengers and other contacts
+- Dzmitry Pauliu (dpauliu@exadel.com)
+- Lizaveta Pauliu (lpauliu@exadel.com)
 
 [product-screenshot]: screenshot.png

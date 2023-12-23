@@ -1,0 +1,27 @@
+To use Azure-PlantUML it is necessary to use specific `!includes`.
+First, AzurePuml url should be defined and `AzureCommon.puml` should be included.
+Then .puml files should be included for each service defined under category in json object below.
+For example, if following categories and services are defined
+
+```
+{{
+    "AIMachineLearning": ["AzureBotService", "AzureBatchAI"],
+    "Intune" : ["AzureIntune"]
+}}
+```
+
+Following code should be included after @startuml in PlantUML diagram code:
+
+```
+!define AzurePuml https://raw.githubusercontent.com/plantuml-stdlib/Azure-PlantUML/release/2-2/dist
+!includeurl AzurePuml/AzureCommon.puml
+!includeurl AzurePuml/AIMachineLearning/AzureBotService.puml
+!includeurl AzurePuml/AIMachineLearning/AzureBatchAI.puml
+!includeurl AzurePuml/Intune/AzureIntune.puml
+```
+
+Azure services to include:
+{services_by_category}
+
+Azure services syntax rules:
+{services_syntax_rules}

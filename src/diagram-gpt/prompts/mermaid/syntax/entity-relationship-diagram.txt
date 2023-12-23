@@ -1,0 +1,26 @@
+Entity Relationship Diagram Syntax:
+
+- Entities: `entityName { attributeType attributeName }`
+- Relationships: `entity1 cardinality1--cardinality2 entity2 : "relationshipLabel"`
+- Cardinality: `||` for exactly one, `o|` for zero or one, `}|` for one or more, `}o` for zero or more
+- Entity Name Aliases: `alias[EntityName]`
+- Relationship Labels: Enclosed in double quotes if more than one word, or empty `""` for no label
+- Data Types: only next types could be used: int, float, string, date, decimal. Arrays or collections are not allowed
+
+Example:
+
+erDiagram
+    CUSTOMER ||--o{ ORDER : "places"
+    ORDER ||--|{ LINE-ITEM : "contains"
+
+    CUSTOMER {
+        string name 
+        string custNumber
+        string sector
+    }
+
+    LINE-ITEM {
+        string productCode
+        int quantity
+        float pricePerUnit
+    }

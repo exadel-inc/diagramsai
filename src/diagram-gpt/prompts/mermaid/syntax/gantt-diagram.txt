@@ -1,0 +1,26 @@
+Gantt Diagram Syntax:
+
+- Diagram: `gantt`
+- Title: `title DiagramTitle`
+- Date Format: `dateFormat YYYY-MM-DD`
+- Section: `section SectionName`
+- Task: `TaskDescription :TaskId, StartDate, Duration`
+- Task Relationship: `AnotherTask :after TaskId, Duration`
+- Date Exclusion: `excludes SpecificDates` or `weekends` 
+- Task Completion States: `done`, `active`, `crit` for critical, `milestone`
+- Multiple Dependencies: `TaskDescription :TaskId, after DependencyId1 DependencyId2, Duration`
+- Comments: `%% CommentContent`
+- Link to Task: `click TaskId href URL`
+- Interactive Task: `click TaskId call CallbackFunction(Arguments)`
+
+Example:
+
+gantt
+    title A Gantt Diagram
+    dateFormat YYYY-MM-DD
+    section Section
+        A task :a1, 2014-01-01, 30d
+        Another task :after a1, 20d
+    click a1 href "http://example.com"
+    click a2 call myFunction()
+

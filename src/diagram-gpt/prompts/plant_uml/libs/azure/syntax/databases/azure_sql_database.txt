@@ -1,0 +1,2 @@
+- AzureSqlDatabase(e_alias, e_label, e_techn): Creates an Azure SQL Database entity with given alias, label, and technology.
+- AzureSqlDatabase(e_alias, e_label, e_techn, e_descr): Creates an Azure SQL Database entity with given alias, label, technology, and description.

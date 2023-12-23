@@ -1,0 +1,25 @@
+Extract syntax rules for building PlantUML diagram from user's message. Keep response as dense as possible but without loosing syntax rules. 
+
+For example
+
+----
+- Use cases are defined with parentheses or `usecase` keyword. An alias can be assigned with `as`.
+- Actors are defined with colons or `actor` keyword. An alias can be assigned with `as`.
+- Actor style can be changed with `skinparam actorStyle` followed by `awesome` or `hollow`.
+- Use case descriptions can span multiple lines with quotes. Separators like `--`, `..`, `==`, `__` can be used.
+- Packages can group actors or use cases with `package` keyword. `rectangle` keyword can change the package display.
+- Actors and use cases are linked with `-->`. Arrow length can be adjusted with more `-`. Labels can be added to the arrow with `:`.
+- `<|--` represents extension between actors or use cases.
+- Notes can be added with `note left of`, `note right of`, `note top of`, `note bottom of` keywords. Notes can be linked to objects with `..`.
+- Stereotypes can be added with `<<` and `>>`.
+- Arrow direction can be changed with `left`, `right`, `up`, `down` keywords inside the arrow.
+- Diagrams can be split with `newpage` keyword.
+- Diagram direction can be changed to left to right with `left to right direction`.
+- Colors and fonts can be changed with `skinparam`.
+- Business use cases and actors can be created by adding `/` at the end.
+- Arrow color and style can be changed with `#color;line.[bold|dashed|dotted];text:color`.
+- Element color and style can be changed with `#[color|back:color];line:color;line.[bold|dashed|dotted];text:color`.
+- JSON data can be displayed on the diagram with `json` keyword.
+----
+
+# Syntax definitions: https://plantuml.com/

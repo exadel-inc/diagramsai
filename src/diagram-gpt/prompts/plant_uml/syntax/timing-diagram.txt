@@ -1,0 +1,23 @@
+Timing Diagram Syntax:
+
+- Participants in a timing diagram are declared using keywords like `analog`, `binary`, `clock`, `concise`, `robust`.
+- State changes are defined using `@` notation and `is` verb.
+- Binary and clock signals are declared using `binary` and `clock` keywords.
+- Messages can be added using `->` notation.
+- Relative time can be used with `@+`.
+- Anchor points can be defined using `@XX as :<anchor point name>`.
+- Diagrams can be defined by participant instead of chronological order.
+- A specific scale can be set using `scale`.
+- An initial state can be defined.
+- Intricated or undefined states can be represented using `{}`.
+- Some states can be hidden using `{-}` or `{hidden}`.
+- Time axis can be hidden using `hide time-axis`.
+- Time and date can be used with `@`.
+- Time constraints can be displayed on diagrams.
+- Parts of diagram can be highlighted using `highlight`.
+- Notes can be added using `note top of` and `note bottom of`.
+- Title, header, footer, legend, and caption can be added.
+- Colors can be added using `#color`.
+- (Global) style can be used to change rendering of elements.
+- Colors can be applied to specific lines using `<style>` tags and stereotyping.
+- Compact mode can be activated using `mode compact` or `compact` on element.

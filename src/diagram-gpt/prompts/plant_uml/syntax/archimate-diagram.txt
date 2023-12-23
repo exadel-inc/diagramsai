@@ -1,0 +1,14 @@
+Archimate Diagram Syntax:
+
+- Use `archimate` keyword to define an element. Stereotypes and colors can be added.
+- Use `circle` keyword and preprocessor to create junctions.
+- Use `rectangle` keyword with `<<behavior>>` stereotype and `#color` to define behaviors.
+- Use `sprite` keyword with jar path to define sprites.
+- Use `listsprite` to list all possible sprites.
+- Use `!include <archimate/Archimate>` to include ArchiMate macros.
+- Define ArchiMate elements with `Category_ElementName(nameOfTheElement, "description")`.
+- Define ArchiMate relationships with `Rel_RelationType(fromElement, toElement, "description")` or `Rel_RelationType_Direction(fromElement, toElement, "description")`.
+- Use `left to right direction` to change diagram direction.
+- Use `skinparam nodesep` to adjust node separation.
+- Use `skinparam rectangle` to adjust rectangle style.
+- Use `legend left` to add a legend on the left.

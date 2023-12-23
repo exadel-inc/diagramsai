@@ -1,0 +1,74 @@
+To use Kubernetes PlantUML it is necessary to use specific `!includes`.
+First, KubernetesPuml url should be defined, `kubernetes_Common.puml` and `kubernetes_Context.puml` should be included for all diagrams.
+Then .puml files should be included for each service defined under category in json object below.
+For example, if following categories and services are defined
+
+```
+{{
+    "AIMachineLearning": ["AzureBotService", "AzureBatchAI"],
+    "Intune" : ["AzureIntune"]
+}}
+```
+
+Following code should be included after @startuml in PlantUML diagram code:
+
+```
+!define KubernetesPuml https://raw.githubusercontent.com/dcasati/kubernetes-PlantUML/master/dist
+!includeurl KubernetesPuml/kubernetes_Common.puml
+!includeurl KubernetesPuml/kubernetes_Context.puml
+!includeurl KubernetesPuml/AIMachineLearning/AzureBotService.puml
+!includeurl KubernetesPuml/AIMachineLearning/AzureBatchAI.puml
+!includeurl KubernetesPuml/Intune/AzureIntune.puml
+```
+
+Common services syntax rules:
+- Cluster(e_alias, e_label) and Cluster(e_alias, e_label, e_type) define a cluster with an alias and label, optionally specifying a type.
+- Namespace(e_alias, e_label) and Namespace(e_alias, e_label, e_type) define a namespace with an alias and label, optionally specifying a type.
+- Node(e_alias, e_label) and Node(e_alias, e_label, e_type) define a node with an alias and label, optionally specifying a type.
+- Pod(e_alias, e_label) and Pod(e_alias, e_label, e_type) define a pod with an alias and label, optionally specifying a type.
+- Service(e_alias, e_label) and Service(e_alias, e_label, e_type) define a service with an alias and label, optionally specifying a type. 
+- Cluster_Boundary(e_alias, e_label): Defines a boundary for a cluster.
+- Namespace_Boundary(e_alias, e_label): Defines a boundary for a namespace.
+- Node_Boundary(e_alias, e_label): Defines a boundary for a node.
+- Pod_Boundary(e_alias, e_label): Defines a boundary for a pod.
+- Service_Boundary(e_alias, e_label): Defines a boundary for a service.
+- Rel_Back(e_to, e_from, e_label), Rel_Back(e_to, e_from, e_label, e_techn):
+These methods define a relationship from `e_to` to `e_from` with a label `e_label` and an optional technology
+parameter `e_techn`. The relationship direction is backward.
+- Rel_Neighbor(e_from,e_to, e_label), Rel_Neighbor(e_from,e_to, e_label, e_techn)`:
+These methods define a neighboring relationship from `e_from` to `e_to` with a label `e_label` and an optional
+technology parameter `e_techn`. The relationship direction is forward.
+- Rel_Back_Neighbor(e_to, e_from, e_label), Rel_Back_Neighbor(e_to, e_from, e_label, e_techn):
+These methods define a backward neighboring relationship from `e_to` to `e_from` with a label `e_label` and
+an optional technology parameter `e_techn`.
+- Rel_D(e_from,e_to, e_label), Rel_D(e_from,e_to, e_label, e_techn), Rel_Down(e_from,e_to, e_label),
+Rel_Down(e_from,e_to, e_label, e_techn): These methods define a downward relationship from `e_from` to `e_to`
+with a label `e_label` and an optional technology parameter `e_techn`.
+- Rel_U(e_from,e_to, e_label), Rel_U(e_from,e_to, e_label, e_techn), Rel_Up(e_from,e_to, e_label),
+Rel_Up(e_from,e_to, e_label, e_techn): These methods define an upward relationship from `e_from` to `e_to`
+with a label `e_label` and an optional technology parameter `e_techn`.
+- Rel_L(e_from,e_to, e_label), Rel_L(e_from,e_to, e_label, e_techn), Rel_Left(e_from,e_to, e_label),
+Rel_Left(e_from,e_to, e_label, e_techn): These methods define a leftward relationship from `e_from` to `e_to`
+with a label `e_label` and an optional technology parameter `e_techn`.
+- Rel_R(e_from,e_to, e_label), Rel_R(e_from,e_to, e_label, e_techn), Rel_Right(e_from,e_to, e_label),
+Rel_Right(e_from,e_to, e_label, e_techn): These methods define a rightward relationship
+from `e_from` to `e_to` with a label `e_label` and an optional technology parameter `e_techn`.
+- Lay_D(e_from, e_to), Lay_U(e_from, e_to), Lay_R(e_from, e_to), Lay_L(e_from, e_to):
+These methods define a layout direction (down, up, right, left respectively) from `e_from` to `e_to`.
+
+Example usage of boundary services:
+```
+Cluster(cluster, "Kubernetes Cluster") {{
+    KubernetesApi(kapi, "Kubernetes API", "")
+
+    Namespace_Boundary(nsfe, "Front End") {{
+        KubernetesIng(ingress, "API Gateway", "")
+    }}
+}}
+```
+
+Kubernetes services to include:
+{services_by_category}
+
+Kubernetes services syntax rules:
+{services_syntax_rules}

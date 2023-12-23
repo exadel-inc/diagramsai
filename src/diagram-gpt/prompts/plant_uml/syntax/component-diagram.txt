@@ -1,0 +1,18 @@
+Component Diagram Syntax:
+
+- Components are defined by enclosing the name between brackets or using the `component` keyword. An alias can be assigned using the `as` keyword.
+- Interfaces are defined by enclosing the name between parentheses or using the `interface` keyword. An alias can be assigned using the `as` keyword.
+- Links between elements are made using combinations of dotted line (`..`), straight line (`--`), and arrows (`-->`) symbols.
+- Notes can be added using `note left of`, `note right of`, `note top of`, `note bottom of` keywords. Notes can also be linked to objects using the `..` symbol.
+- Components and interfaces can be grouped using keywords like `package`, `node`, `folder`, `frame`, `cloud`, `database`.
+- Arrow direction can be changed using `left`, `right`, `up`, `down` keywords inside the arrow.
+- Diagram direction can be changed to left to right using the `left to right direction` command.
+- UML2 notation is used by default. UML1 notation can be used with `skinparam componentStyle uml1` command. Rectangle notation can be used with `skinparam componentStyle rectangle` command.
+- Component descriptions can span multiple lines using square brackets.
+- Individual colors can be specified after component definition.
+- Stereotypes can be added using `<<` and `>>`. Sprites can be used within stereotype components.
+- Colors and fonts can be changed using the `skinparam` command.
+- Unlinked components can be hidden or removed using `hide @unlinked` or `remove @unlinked` commands.
+- Components can be tagged using `$`. Tagged components can be hidden, removed, or restored.
+- JSON data can be displayed on the diagram using the `json` keyword.
+- Ports can be added to components using `port`, `portin`, and `portout` keywords.

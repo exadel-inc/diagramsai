@@ -1,0 +1,2 @@
+- AzureMachineLearningService(e_alias, e_label, e_techn): Defines an Azure Machine Learning Service entity with alias, label, and technology.
+- AzureMachineLearningService(e_alias, e_label, e_techn, e_descr): Defines an Azure Machine Learning Service entity with alias, label, technology, and description.

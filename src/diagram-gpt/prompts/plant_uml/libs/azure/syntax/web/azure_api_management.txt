@@ -1,0 +1,2 @@
+- AzureAPIManagement(e_alias, e_label, e_techn): Creates an Azure API Management entity with given alias, label, and technology.
+- AzureAPIManagement(e_alias, e_label, e_techn, e_descr): Creates an Azure API Management entity with given alias, label, technology, and description.

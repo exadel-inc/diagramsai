@@ -1,0 +1,4 @@
+- VirtualPrivateCloud(e_alias, e_label, e_techn): Defines an AWS Virtual Private Cloud entity with alias, label, and technology.
+- VirtualPrivateCloud(e_alias, e_label, e_techn, e_descr): Defines an AWS Virtual Private Cloud entity with alias, label, technology, and description.
+- VirtualPrivateCloudParticipant(p_alias, p_label, p_techn): Defines a participant in AWS Virtual Private Cloud with alias, label, and technology.
+- VirtualPrivateCloudParticipant(p_alias, p_label, p_techn, p_descr): Defines a participant in AWS Virtual Private Cloud with alias, label, technology, and description.

@@ -1,0 +1,4 @@
+- Config(e_alias, e_label, e_techn): Defines an AWS Config entity with alias, label, and technology.
+- Config(e_alias, e_label, e_techn, e_descr): Defines an AWS Config entity with alias, label, technology, and description.
+- ConfigParticipant(p_alias, p_label, p_techn): Defines a participant in AWS Config with alias, label, and technology.
+- ConfigParticipant(p_alias, p_label, p_techn, p_descr): Defines a participant in AWS Config with alias, label, technology, and description.

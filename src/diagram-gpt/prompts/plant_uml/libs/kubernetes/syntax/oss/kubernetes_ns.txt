@@ -1,0 +1,2 @@
+KubernetesNs(e_alias, e_label, e_techn) defines a Kubernetes namespace entity with given alias, label, and technology.
+KubernetesNs(e_alias, e_label, e_techn, e_descr) defines a Kubernetes namespace entity with given alias, label, technology, and description.

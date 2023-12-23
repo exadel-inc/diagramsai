@@ -1,0 +1,22 @@
+Gantt Diagram Syntax:
+
+- Tasks are defined with square brackets. Workload is specified with `requires` keyword.
+- Tasks can be started and ended on specific dates with `starts` and `ends` verbs.
+- Tasks can be linked with `-->`. Arrow style can be changed with `#color;line.[bold|dashed|dotted];text:color`.
+- Tasks can be assigned to actors with `on` keyword. Actor's workload can be specified with percentage.
+- Tasks can be colored with `is colored in` keyword.
+- Tasks can be completed with `is xx% completed` or `is xx% complete`.
+- Milestones are defined with `happens` verb. They can be relative or absolute.
+- Notes can be added with `note` keyword. They can be positioned with `left`, `right`, `top`, `bottom`.
+- Tasks can be displayed on the same row with `displays on same row as` keyword.
+- Tasks can be paused on specific dates with `pauses on` keyword.
+- Days can be closed with `is closed` keyword. Days can be colored with `is colored in` keyword.
+- Diagram scale can be changed with `printscale`, `ganttscale`, `projectscale` keywords.
+- Diagram can be zoomed with `zoom` keyword.
+- Tasks can be deleted with `is deleted` keyword.
+- Today can be highlighted with `today is colored in` keyword.
+- Language can be changed with `language` keyword.
+- Labels can be positioned with `label` keyword.
+- Foot boxes can be hidden with `hide footbox` keyword.
+- Header, footer, title, caption, and legend can be added with respective keywords.
+- Style can be changed with `style` keyword.

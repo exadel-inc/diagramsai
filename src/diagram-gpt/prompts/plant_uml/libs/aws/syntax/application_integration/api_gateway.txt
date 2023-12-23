@@ -1,0 +1,4 @@
+- APIGateway(e_alias, e_label, e_techn): Defines an AWS API Gateway entity with alias, label, and technology.
+- APIGateway(e_alias, e_label, e_techn, e_descr): Defines an AWS API Gateway entity with alias, label, technology, and description.
+- APIGatewayParticipant(p_alias, p_label, p_techn): Defines a participant in AWS API Gateway with alias, label, and technology.
+- APIGatewayParticipant(p_alias, p_label, p_techn, p_descr): Defines a participant in AWS API Gateway with alias, label, technology, and description.

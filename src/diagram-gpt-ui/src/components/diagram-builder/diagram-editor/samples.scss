@@ -1,0 +1,17 @@
+@import "../../../colors.scss";
+
+.samples {
+  margin: 10px;
+
+  button {
+    margin: 5px;
+
+    background-color: $secondary-accent;
+    color: $primary-accent;
+
+    &:hover {
+      background-color: $primary-accent;
+      color: $secondary-accent;
+    }
+  }
+}

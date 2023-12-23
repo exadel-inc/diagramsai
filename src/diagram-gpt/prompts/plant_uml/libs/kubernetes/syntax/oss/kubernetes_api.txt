@@ -1,0 +1,2 @@
+- KubernetesApi(e_alias, e_label, e_techn): This method creates a Kubernetes API entity with the provided alias, label, and technology.
+- KubernetesApi(e_alias, e_label, e_techn, e_descr): This method creates a Kubernetes API entity with the provided alias, label, technology, and description.

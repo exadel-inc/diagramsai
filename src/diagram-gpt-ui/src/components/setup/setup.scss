@@ -1,0 +1,24 @@
+@import "../../colors";
+
+.setup {
+  background-color: $primary;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+
+  .form {
+    width: 600px;
+
+    .instructions {
+      display: block;
+      text-align: left;
+      margin-bottom: 20px;
+
+      color: $primary-accent;
+      font-style: italic;
+    }
+  }
+}

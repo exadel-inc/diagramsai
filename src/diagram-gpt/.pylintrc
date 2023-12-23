@@ -1,0 +1,16 @@
+[MASTER]
+disable=
+    E0611, # no-name-in-module
+    C0413, # wrong-import-position
+    C0114, # missing-module-docstring
+    C0115, # missing-class-docstring
+    C0116, # missing-function-docstring
+    C0415, # import outside of toplevel
+    W0406, # import self
+    W1203, # logging-fstring-interpolation
+    W0718, # catching-non-exception
+    R0903, # Too few public methods
+    W0102, # dangerous-default-value,
+    R0913, # too-many-arguments
+    R0902, # too-many-instance-attributes
+    R0801, # duplicate-code
