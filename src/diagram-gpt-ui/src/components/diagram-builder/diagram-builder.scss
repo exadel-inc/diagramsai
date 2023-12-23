@@ -1,0 +1,106 @@
+@import "../../colors.scss";
+
+.diagram-builder {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+
+  height: 100%;
+  width: 100%;
+
+  .diagram-editor {
+    height: 90vh;
+
+    flex: 4;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .controls-panel {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .controls {
+        width: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+
+        svg {
+          margin-left: 10px;
+          cursor: pointer;
+          color: $primary-accent;
+        }
+      }
+    }
+
+    .requirements-list {
+      overflow-x: auto;
+      flex: 1;
+      justify-content: flex-start;
+      margin-bottom: 10px;
+
+      .requirement {
+        margin: 20px;
+        padding: 10px;
+        border: 1px solid $secondary;
+        border-radius: 10px;
+        background-color: $secondary-accent;
+
+        white-space: pre-wrap;
+      }
+    }
+
+    .MuiInputBase-root {
+      margin: 10px;
+    }
+
+    .cm-theme-light {
+      height: 100%;
+      min-height: 100%;
+    }
+  }
+  .diagram-controls {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+
+    // align content verically
+    flex-direction: column;
+
+    button {
+      text-transform: none;
+    }
+
+    .diagram-types {
+      display: flex;
+      justify-content: center;
+
+      h3 {
+        text-align: center;
+      }
+
+      button {
+        margin: 0 10px;
+      }
+    }
+  }
+  .diagram-viewer {
+    height: 90vh;
+    max-height: 90vh;
+    max-width: 55vw;
+    flex: 7;
+    background-color: $primary;
+  }
+
+  .with-border {
+    margin: 10px;
+
+    border: 1px solid $secondary;
+    border-radius: 10px;
+  }
+}

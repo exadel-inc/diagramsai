@@ -1,0 +1,4 @@
+- IdentityAccessManagementAWSSTS(e_alias, e_label, e_techn): Defines an AWS Identity Access Management AWS STS entity with alias, label, and technology.
+- IdentityAccessManagementAWSSTS(e_alias, e_label, e_techn, e_descr): Defines an AWS Identity Access Management AWS STS entity with alias, label, technology, and description.
+- IdentityAccessManagementAWSSTSParticipant(p_alias, p_label, p_techn): Defines a participant in AWS Identity Access Management AWS STS with alias, label, and technology.
+- IdentityAccessManagementAWSSTSParticipant(p_alias, p_label, p_techn, p_descr): Defines a participant in AWS Identity Access Management AWS STS with alias, label, technology, and description.

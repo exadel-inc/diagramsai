@@ -1,0 +1,2 @@
+- AzureRedisCache(e_alias, e_label, e_techn): Creates an Azure Redis Cache entity with given alias, label, and technology.
+- AzureRedisCache(e_alias, e_label, e_techn, e_descr): Creates an Azure Redis Cache entity with given alias, label, technology, and description.

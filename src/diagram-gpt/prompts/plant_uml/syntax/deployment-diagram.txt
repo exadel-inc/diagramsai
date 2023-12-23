@@ -1,0 +1,12 @@
+Deployment Diagram Syntax:
+
+- To declare elements in a PlantUML deployment diagram, use the corresponding keywords such as `actor`, `agent`, `artifact`, `boundary`, `card`, `circle`, `cloud`, `collections`, `component`, `control`, `database`, `entity`, `file`, `folder`, `frame`, `hexagon`, `interface`, `label`, `node`, `package`, `person`, `queue`, `rectangle`, `stack`, `storage`, `usecase`.
+- You can also declare elements using short forms. For example, `actor` can be declared as `:a:`, `component` as `[c]`, `interface` as `()i`, and `usecase` as `(u)`.
+- To create links between elements, use `--` or `..` or `~~` or `==`. You can also add labels to the links.
+- To change the color and style of individual arrows, use the inline notation `#color;line.[bold|dashed|dotted];text:color`.
+- To change the color and style of individual elements, use the notation `#[color|back:color];line:color;line.[bold|dashed|dotted];text:color`.
+- To nest elements, use the `{}` notation. For example, `artifact artifact { file file }`.
+- To create an alias for an element, use the `as` keyword. For example, `node Node1 as n1`.
+- To change the color and style of elements using styles, use the `<style>` tag and specify the properties for each element.
+- To add ports to a node, use the `port`, `portin`, and `portout` keywords.
+- To mix different types of elements in a diagram, use the `allowmixing` directive.

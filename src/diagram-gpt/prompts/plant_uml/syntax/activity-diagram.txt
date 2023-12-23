@@ -1,0 +1,24 @@
+Activity Diagram Syntax:
+
+- Activity labels start with `:` and end with `;`. They are linked in their definition order.
+- `start` and `stop` or `end` keywords denote the beginning and end of a diagram.
+- Conditional statements use `if`, `then`, `else`, and `endif` keywords. Labels can be provided using parentheses.
+- `elseif` keyword allows multiple tests. Use `!pragma useVerticalIf on` for vertical mode.
+- `switch`, `case`, and `endswitch` keywords create switch statements.
+- `repeat` and `repeat while` keywords create repeat loops. `backward` keyword can insert an action in the return path.
+- `break` keyword can stop an action on a loop.
+- `label` and `goto` keywords denote goto processing.
+- `while` and `endwhile` keywords create while loops. `backward` keyword can insert an action in the return path.
+- `fork`, `fork again`, and `end fork` or `end merge` keywords denote parallel processing.
+- `split`, `split again`, and `end split` keywords denote split processing.
+- Notes can be added with `note` keyword. `floating` keyword makes a note floating.
+- Activity colors can be changed with `#color`.
+- `skinparam ArrowHeadColor none` connects activities using lines only, without arrows.
+- `->` notation adds texts to arrow, and changes their color. Dotted, dashed, bold or hidden arrows can be used.
+- Parentheses denote connectors. Colors can be added to connectors with `#color`.
+- Activities can be grouped with `group`, `partition`, `package`, `rectangle`, or `card` keywords.
+- Pipe `|` defines swimlanes. Swimlane colors can be changed with `#color`.
+- `detach` or `kill` keywords remove an arrow.
+- Different activity rendering can be achieved by changing the final `;` separator or using stereotype syntax.
+- `skinparam conditionStyle` and `skinparam ConditionEndStyle` change the style of conditions.
+- Custom styles can be applied with `<style>` tag.

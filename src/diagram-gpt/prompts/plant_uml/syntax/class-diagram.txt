@@ -1,0 +1,29 @@
+Class Diagram Syntax:
+
+- Declare elements using their respective keywords such as `class`, `abstract`, `interface`, etc.
+- Define relations between classes using symbols like `<|--` for extension, `*--` for composition, and `o--` for aggregation. Replace `--` with `..` for a dotted line.
+- Add labels to relations using `:` followed by the label text. Use double quotes `""` for cardinality.
+- Use non-letter characters in class names or relation labels by using the `as` keyword or putting the name in quotes `""`.
+- Declare fields and methods using `:` followed by the field's or method's name. Use brackets `{}` to group all fields and methods.
+- Define visibility of fields and methods using `-` for private, `#` for protected, `~` for package private, and `+` for public.
+- Define static or abstract methods or fields using `{static}` or `{abstract}` modifiers.
+- Use separators like `--`, `..`, `==`, `__` to define your own ordering of fields and methods in a class.
+- Define stereotypes using `<<` and `>>`. Add notes using `note left of`, `note right of`, `note top of`, `note bottom of`.
+- Use HTML tags in notes for formatting.
+- Add notes on fields or methods using the format `class::field` or `class::method`.
+- Use `hide` or `show` commands to control the display of classes, fields, methods, etc.
+- Use `remove` command to remove classes.
+- Use `$tags` to tag elements and then remove, hide or restore components either individually or by tags.
+- Use `hide @unlinked` or `remove @unlinked` to hide or remove unlinked classes.
+- Use `extends` and `implements` keywords to define class relationships.
+- Use `package` keyword to define packages. Packages can be nested.
+- Use `skinparam` command to change colors and fonts for the drawing.
+- Use `together` keyword to group some classes together.
+- Use `page (hpages)x(vpages)` command to split the generated image into several files.
+- Use `#[color|back:color];header:color;line:color;line.[bold|dashed|dotted];text:color` to change the color or style of individual class or relation.
+- Use `#color ##[style]color` to change the color or style of individual class.
+- Use `#color;line.[bold|dashed|dotted];text:color` to change the color or style of individual relation or arrows.
+- Use `skinparam groupInheritance` to merge all arrow heads with a threshold as parameter.
+- Use `json` keyword to display JSON data on class or object diagram.
+- Use `set separator none` to disable automatic namespace creation.
+- Use `!pragma useIntermediatePackages false` to disable intermediate packages in class diagrams.

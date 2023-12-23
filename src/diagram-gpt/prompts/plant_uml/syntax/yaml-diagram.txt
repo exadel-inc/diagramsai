@@ -1,0 +1,10 @@
+YAML Diagram Syntax:
+
+- YAML data can be visualized in PlantUML with `@startyaml` and `@endyaml` keywords.
+- Keys with symbols or unicode can be used.
+- Parts of the diagram can be highlighted with `#highlight` keyword.
+- Customized styles can be applied to the diagram with `<style>` tag.
+- Different styles can be applied to different highlights.
+- Global styles can be applied to the diagram with `yamlDiagram` keyword inside `<style>` tag.
+- Node styles can be changed with `node` keyword inside `yamlDiagram`.
+- Arrow styles can be changed with `arrow` keyword inside `yamlDiagram`.

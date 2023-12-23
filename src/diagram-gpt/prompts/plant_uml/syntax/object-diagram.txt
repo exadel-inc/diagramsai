@@ -1,0 +1,17 @@
+Object Diagram Syntax:
+
+- Objects are defined with `object` keyword. An alias can be assigned with `as`.
+- Relations between objects are defined with `<|--` for extension, `*--` for composition, and `o--` for aggregation. Dotted lines can be created with `..`.
+- Labels can be added to the relation with `:` followed by the text of the label. Cardinality can be added with double-quotes `""`.
+- Associations between objects can be created with `-->`.
+- Fields can be declared with `:` followed by the field's name. Fields can also be grouped between brackets `{}`.
+- Map tables or associative arrays can be defined with `map` keyword and `=>` separator. Links can be added with `*->`.
+- JSON data can be displayed on the diagram with `json` keyword.
+- Diagram direction can be changed to left to right with `left to right direction`.
+- Use `hide` or `show` commands to control the display of objects, fields, methods, etc.
+- Use `skinparam` command to change colors and fonts for the drawing.
+- Use `package` keyword to define packages. Packages can be nested.
+- Use `!pragma useIntermediatePackages false` to disable intermediate packages in object diagrams.
+- Define stereotypes using `<<` and `>>`. Add notes using `note left of`, `note right of`, `note top of`, `note bottom of`.
+- Use HTML tags in notes for formatting.
+- Add notes on fields or methods using the format `object::field` or `object::method`.

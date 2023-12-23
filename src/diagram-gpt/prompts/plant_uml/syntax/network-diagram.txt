@@ -1,0 +1,16 @@
+Network Diagram Syntax:
+
+- Networks are defined with `network` keyword. An address can be assigned with `address`.
+- Elements or servers are defined inside a network with their names and an address can be assigned with `address`.
+- Multiple addresses can be assigned to an element using commas.
+- Elements can be grouped with `group` keyword. A color can be assigned with `color`.
+- Sprites can be used in descriptions with `<$sprite>`.
+- Icons from OpenIconic can be used in descriptions with `<&icon>`.
+- Nodes can be used on different networks. 'Jump line' is used over networks.
+- Peer networks are defined with `--`.
+- Title, caption, header, footer or legend can be added to the diagram.
+- Shadow can be turned off with `shadowing 0` inside a `style` block.
+- Width of the networks can be changed with `width`.
+- Other internal networks can be defined with their names and addresses.
+- Global style can be used to change rendering of elements with `style` keyword.
+- Various shapes can be used in network diagrams with `shape`.

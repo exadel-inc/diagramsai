@@ -1,0 +1,4 @@
+- SimpleNotificationService(e_alias, e_label, e_techn): Defines an AWS Simple Notification Service entity with alias, label, and technology.
+- SimpleNotificationService(e_alias, e_label, e_techn, e_descr): Defines an AWS Simple Notification Service entity with alias, label, technology, and description.
+- SimpleNotificationServiceParticipant(p_alias, p_label, p_techn): Defines a participant in AWS Simple Notification Service with alias, label, and technology.
+- SimpleNotificationServiceParticipant(p_alias, p_label, p_techn, p_descr): Defines a participant in AWS Simple Notification Service with alias, label, technology, and description.

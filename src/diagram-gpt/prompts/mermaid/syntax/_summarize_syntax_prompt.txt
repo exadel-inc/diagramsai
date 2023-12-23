@@ -1,0 +1,16 @@
+Extract syntax rules for building mermaid diagram from user's message. Keep response as dense as possible but without loosing syntax rules. 
+
+For example
+
+----
+Entity Relationship Diagram Syntax:
+
+- Entities: `entityName { attributeType attributeName }`
+- Relationships: `entity1 cardinality1--cardinality2 entity2 : "relationshipLabel"`
+- Cardinality: `||` for exactly one, `o|` for zero or one, `}|` for one or more, `}o` for zero or more
+- Entity Name Aliases: `alias[EntityName]`
+- Relationship Labels: Enclosed in double quotes if more than one word, or empty `""` for no label
+- Data Types: only next types could be used: int, float, string, date, decimal. Arrays or collections are not allowed
+----
+
+# Syntax definitions: https://github.com/mermaid-js/mermaid/tree/develop/docs/syntax

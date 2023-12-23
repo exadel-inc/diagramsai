@@ -1,0 +1,42 @@
+Sequence Diagram Syntax:
+
+- Use `->` for a message between two participants. Use `-->` for a dotted arrow. Use `<-` or `<--` for reverse arrows.
+- Declare a participant using `participant`. The order of declaration is the order of display.
+- Change the shape of the participant using keywords like `actor`, `boundary`, `control`, `entity`, `database`, `collections`, `queue`.
+- Rename a participant using the `as` keyword.
+- Change the background color of a participant using `#color`.
+- Use `order` to customize the display order of participants.
+- Use quotes to define participants and their aliases.
+- A participant can send a message to itself. Use `""` for multi-line text.
+- Align text on arrows using `skinparam sequenceMessageAlign`.
+- Put the text of the response message below the arrow with `skinparam responseMessageBelowArrow true`.
+- Change arrow style using `x`, `\`, `/`, `>`, `-`, `o`, `<->`.
+- Change arrow color using `-[#color]>`.
+- Use `autonumber` to automatically add an incrementing number to messages.
+- Use `autonumber stop` and `autonumber resume` to pause and resume automatic numbering.
+- Use `title` to add a title to the page. Use `header` and `footer` to display headers and footers.
+- Use `newpage` to split a diagram into several images.
+- Group messages together using `alt/else`, `opt`, `loop`, `par`, `break`, `critical`, `group`.
+- Put notes on messages using `note left` or `note right`. Use `end note` for multi-line notes.
+- Place notes relative to participant with `note left of`, `note right of` or `note over`.
+- Use `hnote` and `rnote` to change note shapes.
+- Use `note across` to make a note over all participants.
+- Use `/` to make several notes aligned at the same level.
+- Use `==` separator to divide your diagram into logical steps.
+- Use `ref over` to add reference in a diagram.
+- Use `...` to indicate a delay in the diagram.
+- Use `maxMessageSize` to break long messages.
+- Use `|||` to indicate some spacing in the diagram.
+- Use `activate` and `deactivate` to denote participant activation. Use `destroy` to denote the end of the lifeline of a participant.
+- Use `create` keyword to emphasize that a message is creating a new object.
+- Use `hide footbox` to remove the foot boxes of the diagram.
+- Use `skinparam` command to change colors, fonts, and other rendering parameters for the drawing.
+- Use `box` and `end box` to draw a box around some participants.
+- Use `hide unlinked` to hide unlinked participants.
+- Use `<<` and `>>` to add stereotypes to participants. Use `(X,color)` to add a spotted character in a colored circle.
+- Use `skinparam style strictuml` to conform to strict UML.
+- Use `skinparam lifelineStrategy solid` to have solid life line in sequence diagrams.
+- Use `skinparam ParticipantPadding` and `skinparam BoxPadding` to change padding settings.
+- Use `hide footbox` to remove the foot boxes of the diagram.
+- Use `mainframe` to denote a mainframe.
+- Use `(nn)` option to make the arrows slanted, where nn is the number of shift pixels.

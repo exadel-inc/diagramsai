@@ -1,0 +1,76 @@
+@import "../../_colors.scss";
+
+div.App {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+header {
+  height: 75px;
+  background-color: $primary-accent;
+  color: $primary;
+  display: flex;
+  align-items: center;
+}
+
+main {
+  flex: auto;
+  background-color: $primary;
+  color: $primary-accent;
+}
+
+footer {
+  height: 50px;
+  background-color: $primary-accent;
+  color: $primary;
+}
+
+.App-logo {
+  height: 50px;
+  width: 50px;
+  pointer-events: none;
+  margin-left: 10px;
+  margin-right: 20px;
+}
+
+.Diagram-logo {
+  width: 40px;
+  padding: 10px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $primary;
+  }
+
+  &.selected {
+    background-color: $primary;
+  }
+}
+
+.App-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+
+  .app-menu {
+    flex: 1;
+    background-color: $primary-accent;
+    border-top: 1px solid $primary;
+    border-bottom: 1px solid $primary;
+  }
+
+  .app-container {
+    flex: 40;
+  }
+}
+
+button.selected {
+  background-color: $primary-accent;
+  color: $primary;
+  opacity: 0.7;
+
+  &:hover {
+    color: $primary-accent;
+  }
+}

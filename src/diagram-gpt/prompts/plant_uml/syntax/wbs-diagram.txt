@@ -1,0 +1,14 @@
+WBS Diagram Syntax:
+
+- WBS diagrams can be created in PlantUML using `@startwbs` and `@endwbs`.
+- OrgMode syntax can be used to create hierarchical structures with `*`.
+- Direction can be changed with `<` and `>`.
+- Arithmetic notation can be used to choose diagram side with `+` and `-`.
+- Multiline boxes can be created with `:` and `;`.
+- Boxless nodes can be created with `_`.
+- Node color can be changed with inline color using `[#color]` or style color with `<style>` block.
+- Diagram style can be changed with `<style>` block.
+- Word wrap can be controlled with `MaximumWidth` setting.
+- Arrows between WBS elements can be added using aliases with `as` or parentheses.
+- Creole or HTML Creole can be used for text formatting.
+- Line, list, and title formatting can be done with Creole syntax.

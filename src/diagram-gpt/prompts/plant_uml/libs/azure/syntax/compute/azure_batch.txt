@@ -1,0 +1,2 @@
+- AzureBatch(e_alias, e_label, e_techn): This method creates an Azure Batch entity with a specified alias, label, and technology.
+- AzureBatch(e_alias, e_label, e_techn, e_descr): This method creates an Azure Batch entity with a specified alias, label, technology, and description.

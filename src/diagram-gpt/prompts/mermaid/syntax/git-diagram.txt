@@ -1,0 +1,52 @@
+Gitgraph Diagram Syntax:
+
+- Diagram declaration: `gitGraph`
+- Commits: `commit`
+- Commit id: `commit id: "idName"`
+- Commit type: `commit type: type`, types include NORMAL, REVERSE, HIGHLIGHT
+- Commit tag: `commit tag: "tagName"`
+- Branching: `branch branchName`
+- Checking out a branch: `checkout branchName`
+- Merging branches: `merge branchName`
+- Cherry pick a commit: `cherry-pick id: "commitId"`
+
+Configuration options:
+
+- Branch visibility: `showBranches: boolean`
+- Commit label visibility: `showCommitLabel: boolean`
+- Name of the default branch: `mainBranchName: string`
+- Position of the main branch: `mainBranchOrder: number`
+
+Orientation:
+
+- Left-to-Right (default): `gitGraph LR:` 
+- Top-to-Bottom: `gitGraph TB:`
+
+Theme Variable Customizations:
+
+- Branch colors: `git0` to `git7`
+- Branch label colors: `gitBranchLabel0` to `gitBranchLabel7`
+- Commit label color: `commitLabelColor`
+- Commit label background color: `commitLabelBackground`
+- Commit label font size: `commitLabelFontSize`
+- Tag label color: `tagLabelColor`
+- Tag label background color: `tagLabelBackground`
+- Tag label border color: `tagLabelBorder`
+- Tag label font size: `tagLabelFontSize`
+- Highlight commit colors: `gitInv0` to `gitInv7`
+
+
+Example:
+
+
+gitGraph
+   commit
+   commit
+   branch develop
+   checkout develop
+   commit
+   commit
+   checkout main
+   merge develop
+   commit
+   commit

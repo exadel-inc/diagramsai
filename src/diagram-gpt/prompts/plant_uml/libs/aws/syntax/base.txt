@@ -1,0 +1,26 @@
+To use AWS PlantUML it is necessary to use specific `!includes`.
+First, AWSPuml url should be defined and `AWSCommon.puml` should be included.
+Then .puml files should be included for each service defined under category in json object below.
+For example, if following categories and services are defined
+
+```
+{{
+    "Robotics": ["RoboMaker"],
+    "MachineLearning" : ["SageMakerModel"]
+}}
+```
+
+Following code should be included after @startuml in PlantUML diagram code:
+
+```
+!define AWSPuml https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/v17.0/dist
+!includeurl AWSPuml/AWSCommon.puml
+!includeurl AWSPuml/Robotics/RoboMaker.puml
+!includeurl AWSPuml/MachineLearning/SageMakerModel.puml
+```
+
+AWS services to include:
+{services_by_category}
+
+AWS services syntax rules:
+{services_syntax_rules}

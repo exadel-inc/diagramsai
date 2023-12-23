@@ -1,0 +1,15 @@
+# pull official base image
+FROM node:18-alpine
+
+WORKDIR /diagram-gpt-ui
+
+ENV PATH /diagram-gpt-ui/node_modules/.bin:$PATH
+
+COPY package.json /diagram-gpt-ui
+COPY package-lock.json /diagram-gpt-ui
+
+RUN npm install
+
+COPY . /diagram-gpt-ui/
+
+CMD ["npm", "start"]

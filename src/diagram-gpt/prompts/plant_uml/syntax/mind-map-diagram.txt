@@ -1,0 +1,13 @@
+MindMap Diagram Syntax:
+
+- MindMaps in PlantUML are created using `@startmindmap` and `@endmindmap`.
+- Nodes are defined with `*` for root node and `**` for sub-nodes. More `*` means deeper level.
+- Nodes can be placed on left side by adding `left side` before defining them.
+- Multiline nodes can be created with `:` and `;`.
+- Multiple root nodes can be created by defining multiple `*` nodes.
+- Node colors can be changed with `[#Color]` inline or by defining a style with `BackgroundColor`.
+- Node box can be removed with `_` after `*`.
+- Diagram direction can be changed with `left side`.
+- Node style can be changed with `<style>` block. Styles can be applied to `node`, `:depth(n)`, and `boxless`.
+- Word wrap can be controlled with `MaximumWidth` setting.
+- Creole or HTML Creole can be used on MindMap with `:==Creole` or `: <b>HTML Creole`.

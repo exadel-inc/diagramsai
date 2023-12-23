@@ -1,0 +1,21 @@
+Pie Chart Diagram Syntax:
+
+- Start Diagram: `pie [showData]`
+- Title: `title "chartTitle"`
+- Data Section: `"dataLabel" : dataValue` (data values can be decimal up to two place)
+
+Optional Parameters:
+- `showData`: Displays actual data values after legend
+- `title "chartTitle"`: Defines chart title
+
+Configuration Parameter:
+- `textPosition`: Determines axial position of pie slice labels, ranges from 0.0 at center to 1.0 at outside edge of circle. Default is 0.75
+
+Example:
+
+pie showData
+title "Key elements in Product X"
+"Calcium" : 42.96
+"Potassium" : 50.05
+"Magnesium" : 10.01
+"Iron" :  5

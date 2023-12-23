@@ -1,0 +1,80 @@
+Sequence Diagram Syntax:
+
+- Diagrams: `sequenceDiagram`
+- Participants: `participant ActorName`
+- Actors: `actor ActorName`
+- Aliases: `participant A as ActorName`
+- Actor creation and destruction: `create participant ActorName` and `destroy ActorName`
+- Relationships: `Actor1->>Actor2: "Message"`
+- Grouping: 
+```md
+box Color GroupName
+... actors ...
+end
+```
+- Messages (Six types of arrows supported):
+    - `->`  for solid line without arrow
+    - `-->` for dashed line without arrow
+    - `->>` for solid line with arrowhead
+    - `-->>` for dashed line with arrowhead
+    - `-x` for solid line with cross
+    - `--x` for dashed line with cross
+    - `-)` for solid line with solid open arrow (async)
+    - `--)` for dashed line with solid open arrow (async)
+- Activations: `activate ActorName` and `deactivate ActorName`. Also can use `+`/-` suffix to arrow
+- Notes: `Note right of ActorName: "Text"`
+- Loops: 
+```md
+loop LoopText
+... statements ...
+end
+```
+- Alternatives: 
+```md
+alt DescribingText
+... statements ...
+else
+... another statements ...
+end
+```
+- Optionals: 
+```md
+opt DescribingText
+... statements ...
+end
+```
+- Parallel Actions: 
+```md
+par ActionText1
+... statements ...
+and ActionText2
+... another statements ...
+end
+```
+- Critical Regions: 
+```md
+critical ActionText
+... statements ...
+option OptionText
+... another statements ...
+end
+```
+- Breaks: 
+```md
+break BreakText
+... statements ...
+end
+```
+- Comments: `%% CommentText`
+- Entity Escape Codes: `#Code;`
+- Actor Menus: `link Actor: Label @ URL`
+- Advanced Menus: `links Actor: {"Label": "URL"}`
+- Sequence Numbers: `autonumber`
+- CSS Styling (Can define class-based styles for actors, texts, messages, etc.)
+
+
+sequenceDiagram
+    participant Alice
+    participant Bob
+    Alice->>Bob: Hi Bob
+    Bob->>Alice: Hi Alice

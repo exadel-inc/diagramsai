@@ -1,0 +1,20 @@
+Flowchart Diagram Syntax:
+
+- Nodes: `id` or `id[Node Text]` 
+- Node Shapes: Round edges `id(Node Text)`, Stadium `id([Node Text])`, Subroutine shape `id[[Node Text]]`, Cylindrical `id[(Node Text)]`, Circle `id((Node Text))`, Asymmetric `id>Node Text]`, Rhombus `id{Node Text}`, Hexagon `id{{Node Text}}`, Parallelogram `id[/Node Text/]` or `id[\Node Text\]`, Trapezoid `id[/Node Text\]`, Double Circle `id(((Node Text)))`
+- Links: `node1-->node2` for arrow, `node1 --- node2` for open link. Add text with `node1-- text --node2` or `node1---|text|node2`. Additional types include dotted `node1-.->node2`, dotted with text `node1-. text .->node2`, thick `node1 ==> node2`, and thick with text `node1 == text ==> node2`
+- Direction: `flowchart direction` or `graph direction` where direction is TB/TD for top to bottom, BT for bottom to top, RL for right to left, or LR for left to right
+- Subgraphs: `subgraph title graphDefinition end`
+- Styling: `style id styleOptions;` for nodes
+- Classes: Define with `classDef className styleOptions;` then assign with `class nodeId className;` or `nodeId:::className`
+- Events: `click nodeId callback` for JS callback or `click nodeId URL` for link
+- Markdown: Use double quotes and backticks to enclose markdown text
+- Comments: `%% Comment text`
+
+For example:
+
+flowchart LR
+    id1[Node Text]-->id2[Another Node]
+    style id1 fill:#f9f,stroke:#333,stroke-width:4px;
+    classDef someclass fill:#f96;
+    id2:::someclass;

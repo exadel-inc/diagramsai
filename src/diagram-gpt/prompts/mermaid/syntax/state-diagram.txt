@@ -1,0 +1,51 @@
+State Diagram Syntax:
+
+- Diagram definition: `stateDiagram` or `stateDiagram-v2`
+- States: `stateId` or `state "Description" as stateId` or `stateId : Description`
+- Transitions: `state1 --> state2` or `state1 --> state2: transitionLabel`
+- Special states: `[*]` for start or end state
+- Composite states: `state stateId { internalState1 --> internalState2  }`
+- Choices: `state choiceState <<choice>>`, used with conditions like `state1 --> choiceState` and `choiceState --> state2: condition`
+- Forks: `state forkState <<fork>>` and `state joinState <<join>>`, used with transitions like `forkState --> state` and `state --> joinState` 
+- Notes: `note right of stateId noteContent` or `note left of stateId noteContent`, enclosed with `end note`
+- Concurrency: `state1 -- state2` represents concurrent states
+- Change direction: `direction LR` or `direction TB` for left-to-right or top-to-bottom, respectively
+- Comments: `%% commentText`
+- Styling: `classDef styleName property:value;` to declare a style, applied by `class stateName styleName` or `stateName:::styleName`
+
+Example:
+
+
+stateDiagram
+    state "Description" as state1
+    state2 : Another state
+
+    state1 --> state2: Transition
+    state2 --> [*]
+
+    state compositeState {
+        state3 --> state4
+    }
+
+    state choice <<choice>>
+    state1 --> choice
+    choice --> state2: if condition
+
+    state forkState <<fork>>
+    forkState --> state3
+    forkState --> state4
+    state joinState <<join>>
+    state3 --> joinState
+    state4 --> joinState
+
+    note right of state1
+        This is a note.
+    end note
+
+    direction LR 
+
+    %% This is a comment
+
+    classDef style1 fill:#f00,color:white;
+    class state1 style1
+    state2:::style1
