@@ -14,32 +14,6 @@
 
 [![Solution Screen Shot][product-screenshot]](https://example.com)
 
-## System Requirements
-
-Application consists of two parts: Frontend and Backend.
-
-In order to run frontend app execute the following set of commands:
-
-```sh
-- npm install
-- npm start
-```
-
-For the backend app:
-
-```sh
-pip install -r requirements.txt
-python main.py
-```
-
-There is an option run app through docker by executing the following command:
-
-```sh
-docker-compose up
-```
-
-Open the app in the browser by navigating to `https://127.0.0.1:3000/`.
-
 ## Installation
 
 1. Get a free API Key at [https://example.com](https://example.com)
@@ -51,19 +25,22 @@ Open the app in the browser by navigating to `https://127.0.0.1:3000/`.
    ```sh
    npm install
    ```
-4. Enter your API in `config.js`
-   ```JS
-   const API_KEY = 'ENTER YOUR API';
+4. Install python packages
+   ```sh
+   pip install -r requirements.txt
    ```
 
-## Getting Started
+There is an option run app through docker by executing the following command:
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+```sh
+docker-compose up
+```
 
-## Documentation
+Open the app in the browser by navigating to `https://127.0.0.1:3000/`.
 
-You can find the documentation [in the project's Wiki](#).
+## Limitations
+
+As of now, not all diagram types are supported, e.g. there is limited support for azure diagrams, and no support for aws anc gcp diagrams.
 
 ## Contributing
 
@@ -85,6 +62,7 @@ Distributed under the MIT License. See [`LICENSE`](./License/MIT) for more infor
 ## Contact
 
 Messengers and other contacts
+
 - Dzmitry Pauliu (dpauliu@exadel.com)
 - Lizaveta Pauliu (lpauliu@exadel.com)
 
