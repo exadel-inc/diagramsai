@@ -57,7 +57,7 @@ After creating your first contributing PR you will be requested to sign our Cont
 
 ## License
 
-Distributed under the MIT License. See [`LICENSE`](./License/MIT) for more information.
+Distributed under the MIT License. See [`LICENSE`](./License) for more information.
 
 ## Contact
 
