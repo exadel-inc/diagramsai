@@ -6,13 +6,13 @@ services:
       - diagram-gpt-ui/.env
     build:
       context: ./diagram-gpt-ui/
-      dockerfile: ./Dockerfile
+      dockerfile: ./Dockerfile.dev
     ports:
-      - "127.0.0.1:3000:3000"
+      - "127.0.0.1:3000:80"
 
   backend:
     build:
       context: ./diagram-gpt/
-      dockerfile: ./Dockerfile
+      dockerfile: ./Dockerfile.dev
     ports:
       - "127.0.0.1:8000:8000"
