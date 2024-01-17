@@ -13,6 +13,6 @@ services:
   backend:
     build:
       context: ./diagram-gpt/
-      dockerfile: ./Dockerfile.dev
+      dockerfile: ./Dockerfile
     ports:
       - "127.0.0.1:8000:8000"
