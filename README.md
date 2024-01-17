@@ -38,6 +38,10 @@ docker-compose up
 
 Open the app in the browser by navigating to `https://127.0.0.1:3000/`.
 
+Finally, docker images are available on the docker bub:
+- https://hub.docker.com/r/exadel/diagram-gpt-ui
+- https://hub.docker.com/r/exadel/diagram-gpt
+
 ## Limitations
 
 As of now, not all diagram types are supported, e.g. there is limited support for azure diagrams, and no support for aws anc gcp diagrams.
