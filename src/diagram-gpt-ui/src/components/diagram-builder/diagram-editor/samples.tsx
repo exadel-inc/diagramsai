@@ -65,7 +65,92 @@ Release Calendar:
         {
           diagramProvider: DiagramProvider.Mermaid,
           diagramType: MermaidDiagramTypes.GANTT_DIAGRAM,
-        }
+        },
+      ],
+    },
+    {
+      title: "Python learning path",
+      requirement: `
+Becoming a Python backend developer is a journey that involves learning a variety of skills related to server-side development. Here's a short list of the learning path for aspiring Python backend developers:
+
+1. Basic Python Knowledge:
+   - Syntax and Semantics
+   - Data Structures (Lists, Tuples, Sets, Dictionaries)
+   - Control Flow (If statements, Loops)
+   - Functions and Modules
+   - Exception Handling
+   - Object-Oriented Programming
+
+2. Advanced Python Concepts:
+   - Iterators and Generators
+   - Decorators
+   - Context Managers
+   - Threading and Multiprocessing
+   - Asynchronous Programming (asyncio)
+
+3. Web Frameworks:
+   - Flask (lightweight, modular)
+   - Django (full-stack, batteries-included)
+   - FastAPI (modern, async, based on Pydantic and Starlette)
+   - Learn about Model-View-Controller (MVC) or Model-View-Template (MVT) design patterns
+
+4. Databases:
+   - SQL Database Basics (MySQL, PostgreSQL)
+   - ORM (Object-Relational Mapping) Libraries like SQLAlchemy or Django ORM
+   - NoSQL Databases (MongoDB)
+      `,
+      supportedDiagrams: [
+        {
+          diagramProvider: DiagramProvider.Mermaid,
+          diagramType: MermaidDiagramTypes.MIND_MAP_DIAGRAM,
+        },
+        {
+          diagramProvider: DiagramProvider.PlantUML,
+          diagramType: PlantUmlDiagramTypes.MIND_MAP_DIAGRAM,
+        },
+      ],
+    },
+    {
+      title: "Org Chart",
+      requirement: `
+Contoso University Organizational Chart
+
+- President
+  - Office of the President
+    - Chief of Staff
+    - Communications Director
+  - Provost (Chief Academic Officer)
+    - College of Arts and Sciences
+      - Dean
+      - Department Chairs (e.g., Biology, English, Mathematics)
+    - College of Engineering
+      - Dean
+      - Department Chairs (e.g., Civil Engineering, Computer Science, Mechanical Engineering)
+    - College of Business
+      - Dean
+      - Department Chairs (e.g., Accounting, Management, Marketing)
+    - Library Services
+      - Chief Librarian
+  - Vice President of Administration and Finance
+    - Human Resources Director
+    - Chief Financial Officer
+    - Information Technology Director
+  - Vice President of Student Affairs
+    - Admissions Director
+    - Financial Aid Director
+    - Student Life Director
+  - Vice President of Research
+    - Research Compliance Officer
+    - Grants and Contracts Director
+  - Vice President of Development and Alumni Relations
+    - Development Director
+    - Alumni Relations Director
+      `,
+      supportedDiagrams: [
+        {
+          diagramProvider: DiagramProvider.PlantUML,
+          diagramType: PlantUmlDiagramTypes.WBS,
+        },
       ],
     },
     {
