@@ -12,7 +12,7 @@
 
 **Diagrams GPT** is an innovative application that streamlines the process of creating sophisticated diagrams by interpreting natural language inputs. The application leverages the power of the latest GPT-4 AI technology to build [Mermaid](https://github.com/mermaid-js/mermaid) and [PlantUML](https://github.com/plantuml/plantuml) diagrams, allowing users to create a wide range of diagrams including, but not limited to, flowcharts, sequence diagrams, class diagrams, and more. By just describing the desired diagram in simple language, the application translates your instructions into perfect visual representations, thereby enhancing data understanding and communication while minimizing manual work.
 
-[![Solution Screen Shot][product-screenshot]](https://example.com)
+[![Solution Screen Shot][product-screenshot]]
 
 ## Installation
 
