@@ -16,7 +16,7 @@
 
 ## Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
+1. Get a API Key at [https://platform.openai.com/](https://platform.openai.com/)
 2. Clone the repo
    ```sh
    git clone https://github.com/exadel-inc/diagrams-gpt.git
