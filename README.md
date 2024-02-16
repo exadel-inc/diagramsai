@@ -1,16 +1,16 @@
-# Exadel Diagrams GPT
+# Exadel DiagramsAI
 
-![GitHub contributors](https://img.shields.io/github/contributors/exadel-inc/diagrams-gpt)
-![GitHub Repo stars](https://img.shields.io/github/stars/exadel-inc/diagrams-gpt?style=plastic)
-![GitHub Repo forks](https://img.shields.io/github/forks/exadel-inc/diagrams-gpt?style=plastic)
-![GitHub issues](https://img.shields.io/github/issues/exadel-inc/diagrams-gpt)
+![GitHub contributors](https://img.shields.io/github/contributors/exadel-inc/diagramsai)
+![GitHub Repo stars](https://img.shields.io/github/stars/exadel-inc/diagramsai?style=plastic)
+![GitHub Repo forks](https://img.shields.io/github/forks/exadel-inc/diagramsai?style=plastic)
+![GitHub issues](https://img.shields.io/github/issues/exadel-inc/diagramsai)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
-**Diagrams GPT** is an application that enables users to create various forms of diagrams such as flowcharts, organizational charts, and network diagrams by inputting simple, natural language instructions. This allows users to visualize data simply and efficiently, saving time and effort compared to traditional manual methods.
+**DiagramsAI** is an application that enables users to create various forms of diagrams such as flowcharts, organizational charts, and network diagrams by inputting simple, natural language instructions. This allows users to visualize data simply and efficiently, saving time and effort compared to traditional manual methods.
 
 ## Description
 
-**Diagrams GPT** is an innovative application that streamlines the process of creating sophisticated diagrams by interpreting natural language inputs. The application leverages the power of the latest GPT-4 AI technology to build [Mermaid](https://github.com/mermaid-js/mermaid) and [PlantUML](https://github.com/plantuml/plantuml) diagrams, allowing users to create a wide range of diagrams including, but not limited to, flowcharts, sequence diagrams, class diagrams, and more. By just describing the desired diagram in simple language, the application translates your instructions into perfect visual representations, thereby enhancing data understanding and communication while minimizing manual work.
+**DiagramsAI** is an innovative application that streamlines the process of creating sophisticated diagrams by interpreting natural language inputs. The application leverages the power of the latest GPT-4 AI technology to build [Mermaid](https://github.com/mermaid-js/mermaid) and [PlantUML](https://github.com/plantuml/plantuml) diagrams, allowing users to create a wide range of diagrams including, but not limited to, flowcharts, sequence diagrams, class diagrams, and more. By just describing the desired diagram in simple language, the application translates your instructions into perfect visual representations, thereby enhancing data understanding and communication while minimizing manual work.
 
 [![Solution Screen Shot][product-screenshot]]
 
@@ -19,7 +19,7 @@
 1. Get a API Key at [https://platform.openai.com/](https://platform.openai.com/)
 2. Clone the repo
    ```sh
-   git clone https://github.com/exadel-inc/diagrams-gpt.git
+   git clone https://github.com/exadel-inc/diagramsai.git
    ```
 3. Install NPM packages
    ```sh
