@@ -6,7 +6,7 @@
 ![GitHub issues](https://img.shields.io/github/issues/exadel-inc/diagramsai)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
-**DiagramsAI** is an application that enables users to create various forms of diagrams such as flowcharts, organizational charts, and network diagrams by inputting simple, natural language instructions. This allows users to visualize data simply and efficiently, saving time and effort compared to traditional manual methods.
+**DiagramsAI** is an application that enables users to create various forms of diagrams, such as flowcharts, organizational charts, and network diagrams, by inputting simple, natural language instructions. This allows users to visualize data simply and efficiently, saving time and effort compared to traditional manual methods.
 
 ## Description
 
@@ -16,7 +16,7 @@
 
 ## Installation
 
-1. Get a API Key at [https://platform.openai.com/](https://platform.openai.com/)
+1. Get an API Key at [https://platform.openai.com/](https://platform.openai.com/)
 2. Clone the repo
    ```sh
    git clone https://github.com/exadel-inc/diagramsai.git
@@ -30,7 +30,7 @@
    pip install -r requirements.txt
    ```
 
-There is an option run app through docker by executing the following command:
+There is an option to run the app through docker by executing the following command:
 
 ```sh
 docker-compose up
@@ -38,17 +38,17 @@ docker-compose up
 
 Open the app in the browser by navigating to `https://127.0.0.1:3000/`.
 
-Finally, docker images are available on the docker bub:
+Finally, docker images are available on the docker hub:
 - https://hub.docker.com/r/exadel/diagram-gpt-ui
 - https://hub.docker.com/r/exadel/diagram-gpt
 
 ## Limitations
 
-As of now, not all diagram types are supported, e.g. there is limited support for azure diagrams, and no support for aws anc gcp diagrams.
+As of now, not all diagram types are supported, e.g. there is limited support for Azure diagrams and no support for AWS and GCP diagrams.
 
 ## Contributing
 
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+Contributions are what makes the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
 1. Fork the Project
 2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
@@ -57,7 +57,7 @@ Contributions are what make the open source community such an amazing place to b
 5. Open a Pull Request
 
 Contributions are welcomed and greatly appreciated.
-After creating your first contributing PR you will be requested to sign our Contributor License Agreement by commenting your PR with a special message.
+After creating your first contributing PR, you will be requested to sign our Contributor License Agreement by commenting on your PR with a special message.
 
 ## License
 
