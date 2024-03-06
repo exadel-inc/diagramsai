@@ -6,7 +6,7 @@ from app.mermaid.api import api as mermaid_api
 from app.plant_uml.api import api as plant_uml_api
 
 app = FastAPI(
-    title="Diagrams GPT",
+    title="Diagrams AI",
     version="1.0.0",
     docs_url="/swagger",
     swagger_ui_oauth2_redirect_url="/swagger/oauth2-redirect",

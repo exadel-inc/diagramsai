@@ -52,7 +52,7 @@ export function Main() {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1>Diagrams GPT</h1>
+          <h1>Diagrams AI</h1>
         </header>
         <main className="App-main">
           <div className="app-menu">{diagramProviders}</div>
