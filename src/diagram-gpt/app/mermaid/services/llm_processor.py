@@ -94,4 +94,4 @@ class LlmProcessor:
         return result.strip()
 
     def _get_llm(self, openai_api_key: str) -> ChatOpenAI:
-        return ChatOpenAI(temperature=0.3, openai_api_key=openai_api_key, model="gpt-4")
+        return ChatOpenAI(temperature=0.3, openai_api_key=openai_api_key, model="gpt-4-turbo-preview")

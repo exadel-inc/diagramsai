@@ -14,6 +14,10 @@
 
 ![Solution Screen Shot][product-screenshot]
 
+## Demo Page
+
+Demo application is deployed by the URL https://diagramsai-ui.ashywave-7a9b8b6b.eastus.azurecontainerapps.io and can be accessed by abyone.
+
 ## Installation
 
 1. Get an API Key at [https://platform.openai.com/](https://platform.openai.com/)
