@@ -3,6 +3,8 @@ from fastapi import APIRouter, Body, Depends, Path
 from dependencies import LlmDependency
 from app.common.models.generate_response import GenerateResponse
 from app.common.models.generate_request import GenerateRequest
+from app.common.models.prompt_request import PromptRequest
+from app.common.models.prompt_response import PromptResponse
 from .models.mermaid_diagram_type import MermaidDiagramType
 from .services.llm_processor import LlmProcessor
 
@@ -39,3 +41,31 @@ async def agenerate_mermaid(
     )
 
     return GenerateResponse(graph_definiton=graph_definiton)
+
+@api.post(
+    "/{diagram_type}/prompt",
+    name="Generate mermaid diagram",
+)
+def generate_mermaid_prompt(
+    diagram_type: Annotated[
+        MermaidDiagramType,
+        Path(title="Diagram type"),
+    ],
+    request: Annotated[PromptRequest, Body(title="Request body")],
+    llm_processor: LlmProcessorDependency,
+) -> PromptResponse:
+    """
+    Generate mermaid diagram from the natural language text.
+    """
+
+    prompt = (
+        llm_processor.prompt_update(
+            diagram_type, request.text, request.diagram_code
+        )
+        if request.diagram_code
+        else llm_processor.prompt_generate(
+            diagram_type, request.text
+        )
+    )
+
+    return PromptResponse(prompt=prompt)
