@@ -1,0 +1,157 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Get diagram generation instructions",
+    "description": "Get instructions required for diagram generation.",
+    "version": "v1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://diagramsai-backend.ashywave-7a9b8b6b.eastus.azurecontainerapps.io"
+    }
+  ],
+  "paths": {
+    "/mermaid/{diagram_type}/prompt": {
+      "post": {
+        "summary": "Generate instructions required to generate diagram",
+        "description": "Generate instructions required to generate diagram.",
+        "operationId": "GetDiagramPrompt",
+        "parameters": [
+          {
+            "name": "diagram_type",
+            "in": "path",
+            "description": "Type of the diagram which suites the best business requirements, e.g. 'flowchart-diagram', 'sequence-diagram', 'class-diagram', etc.",
+            "required": true,
+            "schema": {
+              "allOf": [{ "$ref": "#/components/schemas/MermaidDiagramType" }],
+              "title": "Diagram type"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PromptRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/PromptResponse" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/mermaid/generate-url": {
+      "post": {
+        "tags": ["mermaid"],
+        "summary": "Generate Preview Url For The Mermaid Diagram",
+        "description": "API which generates preview url for the mermaid diagram from its code.",
+        "operationId": "GeneratePreviewUrl",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/GenerateUrlRequest" }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/GenerateUrlResponse" }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "MermaidDiagramType": {
+        "type": "string",
+        "enum": [
+          "flowchart-diagram",
+          "sequence-diagram",
+          "class-diagram",
+          "state-diagram",
+          "entity-relationship-diagram",
+          "gantt-diagram",
+          "pie-chart",
+          "quadrant-chart",
+          "reqirement-diagram",
+          "timeline-diagram",
+          "git-diagram",
+          "mind-map-diagram"
+        ],
+        "title": "MermaidDiagramType"
+      },
+      "PromptRequest": {
+        "properties": {
+          "text": {
+            "description": "Business requirements to generate diagram provided by user. It can be a list of strings if user provided multiple follow up clarifications.",
+            "items": { "type": "string" },
+            "type": "array",
+            "minItems": 1,
+            "title": "Text"
+          },
+          "diagramCode": {
+            "description": "Optional field. Should be populated only when user wants to update already generated diagram. Should include previously generated diagram code.",
+            "anyOf": [{ "type": "string" }, { "type": "null" }],
+            "title": "Diagramcode"
+          }
+        },
+        "type": "object",
+        "required": ["text"],
+        "title": "PromptRequest"
+      },
+      "PromptResponse": {
+        "properties": {
+          "prompt": {
+            "description": "Represents instructions which must be used by the AI to generate diagram code.",
+            "type": "string",
+            "title": "Prompt"
+          }
+        },
+        "type": "object",
+        "required": ["prompt"],
+        "title": "PromptResponse"
+      },
+      "GenerateUrlRequest": {
+        "properties": {
+          "diagramCode": {
+            "description": "Diagram code for which preview URL is generated",
+            "type": "string",
+            "title": "DiagramCode"
+          }
+        },
+        "type": "object",
+        "required": ["diagramCode"],
+        "title": "GenerateUrlRequest"
+      },
+      "GenerateUrlResponse": {
+        "properties": {
+          "url": {
+            "type": "string",
+            "title": "Url",
+            "description": "Preview URL for the diagram"
+          }
+        },
+        "type": "object",
+        "required": ["url"],
+        "title": "GenerateUrlResponse"
+      }
+    }
+  }
+}

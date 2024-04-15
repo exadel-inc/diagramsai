@@ -10,6 +10,17 @@ class LlmProcessor:
         self.prompt_provider = prompt_provider
         self.regex = re.compile(r"```(?:mermaid)?(.*)```", re.DOTALL)
 
+    def prompt_generate(self, diagram_type: MermaidDiagramType, text: list[str]) -> str:
+        messages = self._get_generate_messages(diagram_type, text)
+        return self._messages_to_text(messages)
+    
+    def prompt_update(self, diagram_type: MermaidDiagramType, text: list[str], diagram_code: str) -> str: 
+        messages = self._get_generate_messages(diagram_type, text[:-1])
+        messages.append(AIMessage(content=diagram_code))
+        messages.append(HumanMessage(content=text[-1]))
+
+        return self._messages_to_text(messages)
+
     async def agenerate(
         self, diagram_type: MermaidDiagramType, text: list[str], openai_api_key: str
     ) -> str | None:
@@ -95,3 +106,22 @@ class LlmProcessor:
 
     def _get_llm(self, openai_api_key: str) -> ChatOpenAI:
         return ChatOpenAI(temperature=0.3, openai_api_key=openai_api_key, model="gpt-4-turbo-preview")
+
+    def _messages_to_text(self, messages: list[HumanMessage | SystemMessage | AIMessage]) -> str:
+        result = ""
+
+        for message in messages:
+            result += f"{'-'*30}\n**{self._message_type(message)}**: {message.content}\n\n"
+
+        return result
+    
+    def _message_type(self, message: HumanMessage | SystemMessage | AIMessage) -> str:
+        if isinstance(message, HumanMessage):
+            return "HUMAN"
+        elif isinstance(message, SystemMessage):
+            return "INSTRUCTIONS"
+        elif isinstance(message, AIMessage):
+            return "AI"
+        else:
+            return "Unknown"
+        
