@@ -1,3 +1,5 @@
+import base64; 
+import zlib; 
 from typing import Annotated
 from fastapi import APIRouter, Body, Depends, Path
 from dependencies import LlmDependency
@@ -5,6 +7,8 @@ from app.common.models.generate_response import GenerateResponse
 from app.common.models.generate_request import GenerateRequest
 from app.common.models.prompt_request import PromptRequest
 from app.common.models.prompt_response import PromptResponse
+from app.common.models.generate_url_request import GenerateUrlRequest
+from app.common.models.generate_url_response import GenerateUrlResponse
 from .models.mermaid_diagram_type import MermaidDiagramType
 from .services.llm_processor import LlmProcessor
 
@@ -44,7 +48,7 @@ async def agenerate_mermaid(
 
 @api.post(
     "/{diagram_type}/prompt",
-    name="Generate mermaid diagram",
+    name="Generate instructions required to generate diagram",
 )
 def generate_mermaid_prompt(
     diagram_type: Annotated[
@@ -55,7 +59,7 @@ def generate_mermaid_prompt(
     llm_processor: LlmProcessorDependency,
 ) -> PromptResponse:
     """
-    Generate mermaid diagram from the natural language text.
+    Generate instructions required to generate diagram.
     """
 
     prompt = (
@@ -69,3 +73,21 @@ def generate_mermaid_prompt(
     )
 
     return PromptResponse(prompt=prompt)
+
+@api.post(
+    "/generate-url",
+    name="Generate preview url for the mermaid diagram",
+)
+def generate_mermaid_url(
+    request: Annotated[GenerateUrlRequest, Body(title="Request body")]
+) -> GenerateUrlResponse:
+    """
+    API which generates preview url for the mermaid diagram from its code.
+    """
+
+    encoded = base64.urlsafe_b64encode(zlib.compress(request.diagram_code.encode('utf-8'), 9)).decode('ascii')
+
+    url = f"https://kroki.io/mermaid/svg/{encoded}"
+
+    return GenerateUrlResponse(url=url)
+

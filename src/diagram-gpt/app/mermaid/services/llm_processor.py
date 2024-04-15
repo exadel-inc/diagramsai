@@ -111,7 +111,7 @@ class LlmProcessor:
         result = ""
 
         for message in messages:
-            result += f"{"-"*30}\n**{self._message_type(message)}**: {message.content}\n\n"
+            result += f"{'-'*30}\n**{self._message_type(message)}**: {message.content}\n\n"
 
         return result
     
